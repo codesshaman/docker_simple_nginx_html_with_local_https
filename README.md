@@ -18,10 +18,10 @@ RUN: ``make``
 STOP: ``make down``
 
 COMMAND TO CONTAINER:
-docker exec -it simple_ssl_html <bash_command>
+``docker exec -it simple_ssl_html <bash_command>``
 
 SHELL INSIDE CONTAINER:
-docker exec -it simple_ssl_html sh
+``docker exec -it simple_ssl_html sh``
 
 OPEN:
-https://localhost/
+``https://localhost/``
