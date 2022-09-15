@@ -4,24 +4,24 @@ My training simple config with docker compose
 Your need docker and docker-compose in your operation system.
 
 CLONE:
-git clone https://github.com/codesshaman/simple_docker_nginx_html.git
+git clone https://github.com/codesshaman/docker_simple_nginx_html_with_local_https.git
 
 GO TO FOLDER:
-cd simple_docker_nginx_html
+cd docker_simple_nginx_html_with_local_https
 
 Every commands executed into the folder with docker-compose.yml file.
 
-BUILD (first start):
-docker-compose up -d --build
+BUILD (first start): ``make build``
 
-RUN:
-docker-compose up -d
+RUN: ``make``
 
-STOP:
-docker-compose down
+STOP: ``make down``
 
-CONNECT:
-docker exec -it nginx_simple sh
+COMMAND TO CONTAINER:
+docker exec -it simple_ssl_html <bash_command>
+
+SHELL INSIDE CONTAINER:
+docker exec -it simple_ssl_html sh
 
 OPEN:
-http://localhost/
+https://localhost/

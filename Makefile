@@ -1,7 +1,11 @@
-name = docker_simple_nginx_html_with_Makefile
+name = docker_simple_nginx_html_with_local_https
 all:
 	@printf "Запуск конфигурации ${name}...\n"
 	@docker-compose -f ./docker-compose.yml up -d
+
+build:
+	@printf "Сборка конфигурации ${name}...\n"
+    @docker-compose -f ./docker-compose.yml up -d --build
 
 down:
 	@printf "Остановка конфигурации ${name}...\n"
@@ -22,4 +26,4 @@ fclean:
 #	@docker network prune --force
 #	@docker volume prune --force
 
-.PHONY	: all down re clean fclean
+.PHONY	: all build down re clean fclean
